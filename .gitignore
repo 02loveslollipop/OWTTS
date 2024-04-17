@@ -1,3 +1,4 @@
 *.code-workspace
 /front/node_modules/
 /.vscode/
+urls
