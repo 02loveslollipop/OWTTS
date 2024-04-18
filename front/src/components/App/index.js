@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Map from '../Map';
+import Home from '../Home';
 
 const App = () => {
   return (
     <>
-      <Map />
+      <Home />
     </>
   );
 };
