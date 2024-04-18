@@ -7,6 +7,14 @@ const Map = () => {
         url = 'http://localhost:8111';
     }
     url = `${url}/map.img`;
+
+    useEffect(() => {
+        const fetchMap = setInterval(async () => {
+            
+        }, 10000);
+        return () => clearInterval(fetchMap);
+    }, [url]);
+
     const [map, setMap] = React.useState(url);
 
     return (

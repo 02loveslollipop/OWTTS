@@ -27,9 +27,7 @@ async function getVehicleNameFromHost() {
     
 }
 
-
-
-const Home = ({ }) => {
+const Home = ({ game }) => {
 
     const [vehicleName, setVehicleName] = React.useState('yak-7b');
     const [isIpSet, setIsIpSet] = React.useState(false);
@@ -46,6 +44,7 @@ const Home = ({ }) => {
         try{
             localStorage.setItem('url', `http://${ip}:${port}`);
             localStorage.setItem('isIpAvailable', true);
+            
             setIsIpSet(true);
         }
         catch(error){
