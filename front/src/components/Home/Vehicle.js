@@ -56,9 +56,9 @@ const Vehicle = ({vehicle}) => {
             setVehicleNation(data.country);
             setVehicleType(data.vehicle_type);
             setVehicleImageUrl(`http://${data.images.image}`);
-            setVehicleArcadeBR(data.arcade_br);
-            setVehicleRealisticBR(data.realistic_br);
-            setVehicleSimulatorBR(data.simulator_br);
+            setVehicleArcadeBR(Number(data.arcade_br).toFixed(1));
+            setVehicleRealisticBR(Number(data.realistic_br).toFixed(1));
+            setVehicleSimulatorBR(Number(data.simulator_br).toFixed(1));
             return;
           } catch (error) {
             console.error('Error fetching vehicle:', error);

@@ -245,7 +245,7 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
     p{
         font-weight: lighter;
         font-size: 1rem;
-        text-align: le;
+        text-align: left;
     }
     b{
         font-weight: bold;
@@ -258,9 +258,9 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
 }
 
 .vehicle-info-table {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
     td {
         padding: 3rem;
         text-align: right;
@@ -271,8 +271,6 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
     color: #000;
     background-color: transparent;
     display: block;
-    justify-content: left;
-    align-items: left;
     font-size: 2rem;
     
 }
