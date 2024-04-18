@@ -13,7 +13,6 @@ const Header = () => {
                 <li><button id='navbar__button' onClick={() => {}}>RAW</button></li>
                 <li><button id='navbar__button' onClick={() => {}}>Map</button></li>
                 <li><button id='navbar__button' onClick={() => {}}>Map + Telemetry</button></li>
-                <li><button id='navbar__button' onClick={() => {}}>Settings</button></li>
                 <li><button id='navbar__button' onClick={() => {}}></button></li>
                 
               </ul>

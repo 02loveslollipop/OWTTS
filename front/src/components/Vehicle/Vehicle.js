@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'; 
-import './Home.css';
+import './Vehicle.css';
 
 import image from '../../assets/null.img';
 
@@ -11,24 +11,23 @@ async function getVehicleInfo(vehicle) {
 }
 
 const Vehicle = ({vehicle}) => {
-    const [vehicleName, setVehcileName] = React.useState(vehicle);
-    const [vehicleNameStylized, setVehicleNameStylized] = React.useState('');
-    const [vehicleNation, setVehicleNation] = React.useState('');
-    const [vehicleType, setVehicleType] = React.useState('');
-    const [vehicleImageUrl, setVehicleImageUrl] = React.useState("");
-    const [vehicleArcadeBR, setVehicleArcadeBR] = React.useState(0.0);
-    const [vehicleRealisticBR, setVehicleRealisticBR] = React.useState(0.0);
-    const [vehicleSimulatorBR, setVehicleSimulatorBR] = React.useState(0.0);
-    const vehicleRef = useRef(vehicle);
-    
-    useEffect(() => {
+  const [vehicleName, setVehcileName] = React.useState(vehicle);
+  const [vehicleNameStylized, setVehicleNameStylized] = React.useState('');
+  const [vehicleNation, setVehicleNation] = React.useState('');
+  const [vehicleType, setVehicleType] = React.useState('');
+  const [vehicleImageUrl, setVehicleImageUrl] = React.useState("");
+  const [vehicleArcadeBR, setVehicleArcadeBR] = React.useState(0.0);
+  const [vehicleRealisticBR, setVehicleRealisticBR] = React.useState(0.0);
+  const [vehicleSimulatorBR, setVehicleSimulatorBR] = React.useState(0.0);
+  const vehicleRef = useRef(vehicle);
+
+  useEffect(() => {
       vehicleRef.current = vehicle; 
   }, [vehicle]);
 
     useEffect(() => {
         const fetchParkings = setInterval(async () => {
           try {
-            console.log("current vehicle: ", vehicleRef.current, " / past vehicle: ", vehicleName);
             if (vehicleRef.current === "null") {
               setVehcileName("None");
               setVehicleNameStylized("None");
@@ -45,7 +44,6 @@ const Vehicle = ({vehicle}) => {
             let current_vehicle = vehicleRef.current;
             
             if (past_vehicle === current_vehicle){
-              console.log("vehice is the same, not fetching");
               return;
             }
             const data = await getVehicleInfo(current_vehicle);
@@ -83,10 +81,10 @@ const Vehicle = ({vehicle}) => {
                   </td>
                   <td>
                     <div className='vehicle-info'>
-                      <p><b>Name:</b> {vehicleNameStylized}</p>
-                      <p><b>Nation:</b> {vehicleNation}</p>
-                      <p><b>Type:</b> {vehicleType}</p>
-                      <p><b>BR:</b> Arcade: {vehicleArcadeBR} Realistic: {vehicleRealisticBR} Simulator: {vehicleSimulatorBR}</p>
+                      <p><b>Name:  </b> {vehicleNameStylized}</p>
+                      <p><b>Nation:  </b> {vehicleNation}</p>
+                      <p><b>Type:  </b> {vehicleType}</p>
+                      <p><b>BR:  </b> Arcade: {vehicleArcadeBR} Realistic: {vehicleRealisticBR} Simulator: {vehicleSimulatorBR}</p>
                     </div>
                   </td>
                 </tr>

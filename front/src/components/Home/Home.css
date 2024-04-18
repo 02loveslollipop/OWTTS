@@ -183,7 +183,8 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
     display: flex;
     box-sizing: border-box;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(16px);
     padding: 10px 10px;
     border-radius: 10px;
     flex-grow: 1;
@@ -195,7 +196,8 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(16px);
     padding: 10px 10px;
     border-radius: 10px;
     flex-grow: 1;
@@ -209,7 +211,8 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
     display: flex;
     box-sizing: border-box;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(16px);
     padding: 10px 10px;
     border-radius: 10px;
     flex-grow: 1;
@@ -220,66 +223,72 @@ body {color: #3a7dc1; font-family: 'Montserrat', sans-serif; font-size: 93%; fon
 
 /* END OF COMPONENT CONTAINER */
 
-/* VEHICLE COMPONENT */
+/* IP FORM */
 
-.vehicle-info-title{
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.vehicle-image {
-    width: 100%;
-    height: 100%;
-    max-width: 20vw;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.vehicle-info-container {
-    display: block;
-    width: 100%;
+.ip-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    height: 94%;
+    max-width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(16px);
+    padding: 10px 10px;
+    border-radius: 10px;
+    flex-grow: 1;
+    place-items: center;
+
     p{
-        font-weight: lighter;
-        font-size: 1rem;
-        text-align: left;
-    }
-    b{
-        font-weight: bold;
-        font-size: 1.25rem;
+        font-weight: 1;
     }
     h1{
-        font-size: 1.5rem;
-        text-align: center;
+        font-weight: bold;
+        font-size: 2.75rem;
     }
 }
 
-.vehicle-info-table {
-    width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    td {
-        padding: 3rem;
-        text-align: right;
-    }
+.ip-form-box {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
-
-.vehicle-info {
-    color: #000;
-    background-color: transparent;
-    display: block;
-    font-size: 2rem;
+  
+form {
+    margin: 0 auto;
+    max-width: 320px;
+}
     
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8C041D;
+    background-color: rgba(0,0,0,0.2);
+    justify-content: center;
+    text-align: center;
+    color: white ;
+    backdrop-filter: blur(32px);
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1;
 }
-
-.vehicle-image {
-    max-width: 20rem;
-    max-height: 30rem;
-    object-fit: contain;
-    border-radius: 1rem;
+    
+input[type="submit"] {
+    background-color: #B00321;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 
